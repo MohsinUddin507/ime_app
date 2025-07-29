@@ -4,7 +4,7 @@ version: 0.3.0
 homepage: https://github.com/bharat-biradar/Google-Ml-Kit-plugin
 
 environment:
-  sdk:  ^3.8.1
+  sdk: ^3.8.1
   flutter: ">=2.5.0"
 
 dependencies:
