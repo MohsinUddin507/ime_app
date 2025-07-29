@@ -2,8 +2,9 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:camera/camera.dart';
-import 'package:google_mlkit_face_detection/google_mlkit_face_detection.dart';
+
 import 'package:flutter_tts/flutter_tts.dart';
+import 'package:google_mlkit_face_detection/google_mlkit_face_detection.dart' show InputImage, FaceDetectorOptions, FaceDetector;
 import 'package:ime_app/attendance_logs_page.dart';
 import 'package:path_provider/path_provider.dart';
 import 'database_helper.dart';

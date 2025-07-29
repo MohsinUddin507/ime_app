@@ -36,10 +36,6 @@ dependencies:
   cupertino_icons: 
   camera: 
   google_mlkit_face_detection: 
-  google_mlkit_commons:
-    git:
-      url: https://github.com/your-username/google_mlkit_commons
-      ref: main
   sqflite: 
   flutter_tts: 
   path_provider: 
@@ -48,7 +44,13 @@ dependencies:
   path_provider_linux: 
   path_provider_macos: 
   path_provider_windows: 
-  device_preview:
+  
+
+
+  
+ 
+
+
   
 
 dev_dependencies:
