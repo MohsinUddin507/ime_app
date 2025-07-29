@@ -2,33 +2,30 @@ name: Build iOS App
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   pull_request:
-    branches: [ main ]
+    branches: [main]
 
 jobs:
   build:
-    runs-on: macos-latest
+    runs-on: macos-14
 
     steps:
-      - name: Checkout Code
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v3
 
       - name: Set up Flutter
         uses: subosito/flutter-action@v2
         with:
-          flutter-version: '3.22.0'
+          flutter-version: '3.22.0' # or your required version
 
-      - name: Install CocoaPods dependencies
-        run: |
-          cd ios
-          pod install
+      - name: Install dependencies
+        run: flutter pub get
 
-      - name: Build iOS app
-        run: flutter build ios --release
+      - name: Build IPA
+        run: flutter build ipa
 
-      - name: Upload IPA
-        uses: actions/upload-artifact@v3
+      - name: Upload IPA artifact
+        uses: actions/upload-artifact@v4
         with:
-          name: ios-release
-          path: build/ios/iphoneos/Runner.app
+          name: ios-build
+          path: build/ios/ipa
